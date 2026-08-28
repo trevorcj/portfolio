@@ -25,21 +25,16 @@ function Notes() {
   return (
     <ul>
       {notes.map((note) => (
-        <li
+        <Link
           key={note.id}
-          className="border-b border-[#2c2b2b] last:border-b-0"
+          href={note.url}
+          target="_blank"
+          className="flex flex-col gap-2 border-b border-[#2c2b2b] py-3 text-sm first:pt-0 last:border-b-0 no-link-style transition-all duration-500 ease-in-out hover:pl-2 sm:flex-row sm:justify-between sm:gap-4"
         >
-          <Link
-            href={note.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="no-link-style flex flex-col gap-1 py-3 p-0 text-sm transition-all duration-500 ease-in-out hover:pl-2 first:pt-0 sm:flex-row sm:justify-between sm:gap-4"
-          >
-            <span className="text-white">{note.title}</span>
+          <span className="text-white">{note.title}</span>
 
-            <time className="text-text">{note.year}</time>
-          </Link>
-        </li>
+          <time className="text-text sm:shrink-0">{note.year}</time>
+        </Link>
       ))}
     </ul>
   );
