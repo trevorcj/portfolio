@@ -5,14 +5,14 @@ const blogs = [
     id: 0,
     year: "October 2025",
     title: "Nesting GitHub repos with Git Submodules",
-    url: "https://hashnode.com/edit/cmh4sucpj000102lb4hbm7ivw",
+    url: "https://trevorteachestech.hashnode.dev/nesting-github-repos-with-git-submodules",
   },
   {
     id: 1,
     year: "August 2025",
     title:
       "How to Split Your UI into React Components: Finding the Right Balance",
-    url: "https://hashnode.com/edit/cmeiterl0000b02l1gky42y67",
+    url: "https://trevorteachestech.hashnode.dev/how-to-split-your-ui-into-react-components-finding-the-right-balance",
   },
 ];
 
