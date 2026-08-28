@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     title: "Chimamanda Justus | Frontend Developer",
     description:
       "Frontend developer building web applications and digital products.",
+    images: ["/opengraph-image.png"],
   },
 };
 
