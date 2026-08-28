@@ -19,7 +19,7 @@ const experiences = [
   },
   {
     id: 3,
-    years_of_experience: "July 2025 - Sep. 2025",
+    years_of_experience: "Jul. 2025 - Sep. 2025",
     title: "Technical Writer",
     company: "Manta",
   },
@@ -39,22 +39,23 @@ const experiences = [
 
 function Experiences() {
   return (
-    <>
-      <ul>
-        {experiences.map((experience) => (
-          <li
-            key={experience.id}
-            className="flex gap-8 border-b border-[#2c2b2b] py-3 text-sm first:pt-0 last:border-b-0 sm:gap-4">
-            <span className="text-text">{experience.years_of_experience}</span>
+    <ul>
+      {experiences.map((experience) => (
+        <li
+          key={experience.id}
+          className="border-b border-[#2c2b2b] py-4 text-sm last:border-b-0 sm:flex sm:items-start sm:gap-4"
+        >
+          <span className="block text-text sm:w-[35%] sm:shrink-0">
+            {experience.years_of_experience}
+          </span>
 
-            <span className="flex gap-4">
-              <span>{experience.title}</span>
-              <span className="text-text">{experience.company}</span>
-            </span>
-          </li>
-        ))}
-      </ul>
-    </>
+          <div className="mt-2 flex flex-col gap-1 sm:mt-0 sm:flex-1 sm:flex-row sm:gap-4">
+            <span>{experience.title}</span>
+            <span className="text-text">{experience.company}</span>
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 }
 
