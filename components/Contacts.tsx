@@ -43,7 +43,7 @@ function Contact() {
     <>
       <ul className="flex flex-col items-start gap-3">
         {contacts.map((contact) => (
-          <Link key={contact.id} href={contact.url} className="text-sm m:gap-4">
+          <Link key={contact.id} href={contact.url} target="_blank" className="text-sm m:gap-4">
             <span className="text-white">{contact.platform}</span>
           </Link>
         ))}
