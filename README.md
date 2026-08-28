@@ -25,7 +25,8 @@ If you'd like to work together, collaborate, or just say hello:
 
 - Website: [https://trevorcjustus.tech](https://trevorcjustus.tech)
 - GitHub: [https://github.com/trevorcj](https://github.com/trevorcj)
-- 
+
+
 ## License
 
 This project is personal and not intended to be used as a template or redistributed without permission.
