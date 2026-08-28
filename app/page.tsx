@@ -72,7 +72,7 @@ function Home() {
 
             <p>
               Based in Lagos, Nigeria. Currently open to full-time frontend
-              roles and interesting collaborations.
+              roles and interesting collaborations.{" "}
               <Link href="https://cal.com/trevorcjustus" target="_blank">
                 Book a call
               </Link>
