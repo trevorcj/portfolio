@@ -17,6 +17,14 @@ export const metadata: Metadata = {
     siteName: "Chimamanda Justus",
     locale: "en_NG",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Chimamanda Justus | Frontend Developer",
+      },
+    ],
   },
 
   twitter: {
