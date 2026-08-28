@@ -23,21 +23,22 @@ const notes = [
 
 function Notes() {
   return (
-    <>
-      <ul>
-        {notes.map((note) => (
+    <ul>
+      {notes.map((note) => (
+        <li key={note.id}>
           <Link
-            key={note.id}
             href={note.url}
             target="_blank"
-            className="flex justify-between border-b border-[#2c2b2b] py-3 text-sm first:pt-0 last:border-b-0 sm:gap-4 no-link-style p-0 transition-all duration-500 ease-in-out hover:pl-2">
+            rel="noopener noreferrer"
+            className="no-link-style flex flex-col gap-1 border-b border-[#2c2b2b] py-3 text-sm transition-all duration-500 ease-in-out hover:pl-2 first:pt-0 last:border-b-0 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+          >
             <span className="text-white">{note.title}</span>
 
-            <time className="text-text">{note.year}</time>
+            <time className="shrink-0 text-text">{note.year}</time>
           </Link>
-        ))}
-      </ul>
-    </>
+        </li>
+      ))}
+    </ul>
   );
 }
 
