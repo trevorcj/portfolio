@@ -20,12 +20,15 @@ function Blogs() {
   return (
     <ul>
       {blogs.map((blog) => (
-        <li key={blog.id}>
+        <li
+          key={blog.id}
+          className="border-b border-[#2c2b2b] last:border-b-0"
+        >
           <Link
             href={blog.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="no-link-style flex flex-col gap-1 border-b border-[#2c2b2b] py-3 text-sm transition-all duration-500 ease-in-out hover:pl-2 first:pt-0 last:border-b-0 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+            className="no-link-style flex flex-col gap-1 py-3 text-sm transition-all duration-500 ease-in-out hover:pl-2 first:pt-0 sm:flex-row sm:justify-between sm:gap-4"
           >
             <span className="text-white">{blog.title}</span>
 
