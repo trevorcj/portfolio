@@ -43,21 +43,22 @@ function Experiences() {
       {experiences.map((experience) => (
         <li
           key={experience.id}
-          className="border-b border-[#2c2b2b] py-4 text-sm last:border-b-0 sm:flex sm:items-start sm:gap-4"
+          className="flex flex-col gap-1 border-b border-[#2c2b2b] py-3 text-sm first:pt-0 last:border-b-0 sm:flex-row sm:gap-8"
         >
-          <span className="block text-text sm:w-[35%] sm:shrink-0">
+          <span className="text-text sm:shrink-0">
             {experience.years_of_experience}
           </span>
 
-          <div className="mt-2 flex flex-col gap-1 sm:mt-0 sm:flex-1 sm:flex-row sm:gap-4">
+          <span className="flex flex-col gap-1 sm:flex-row sm:gap-4">
             <span>{experience.title}</span>
             <span className="text-text">{experience.company}</span>
-          </div>
+          </span>
         </li>
       ))}
     </ul>
   );
 }
+Desktop
 
 function ExperienceSection() {
   return (
