@@ -58,7 +58,7 @@ function Experiences() {
     </ul>
   );
 }
-Desktop
+
 
 function ExperienceSection() {
   return (
