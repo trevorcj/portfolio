@@ -10,6 +10,13 @@ const projectDetails = [
     url: "https://orbitbilling.me",
   },
   {
+    title: "Bin Around The Bloc'",
+    description:
+      "A payment and reconciliation platform for residential estates, connecting configurable billing, resident self-service, Paystack payments, and operational reporting in one system. Built with Next.js, TypeScript, Supabase, and Paystack.",
+    thumbnail: "/batb.png",
+    url: "https://bin-around-the-bloc.vercel.app/admin/signup",
+  },
+  {
     title: "Klean",
     description:
       "A command-line tool designed to scaffold a clean Vite + React application with optional Tailwind CSS and structured project architecture. Built with NodeJS.",
