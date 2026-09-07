@@ -1,5 +1,6 @@
 import BlogSection from "@/components/Blogs";
 import ContactSection from "@/components/Contacts";
+import ExperiementsSection from "@/components/Experiements";
 import ExperienceSection from "@/components/Experiences";
 import Footer from "@/components/Footer";
 import MagneticButton from "@/components/MagneticButton";
@@ -85,6 +86,8 @@ function Home() {
         </section>
 
         <Projects />
+
+        <ExperiementsSection />
 
         <ExperienceSection />
 
