@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Avatar from "@/components/Avatar";
+import ScrollAnimations from "@/components/animations/ScrollAnimations";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://trevorcjustus.tech"),
@@ -48,6 +49,7 @@ export default function RootLayout({
           <Avatar />
         </nav>
 
+        <ScrollAnimations />
         {children}
       </body>
     </html>

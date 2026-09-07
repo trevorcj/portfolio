@@ -38,6 +38,10 @@ a {
   position: relative;
 }
 
+[data-scramble] {
+  visibility: hidden;
+}
+
 a::after {
   content: "";
   position: absolute;

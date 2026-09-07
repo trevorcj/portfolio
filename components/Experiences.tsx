@@ -43,8 +43,7 @@ function Experiences() {
       {experiences.map((experience) => (
         <li
           key={experience.id}
-          className="flex flex-col gap-1 border-b border-[#2c2b2b] py-3 text-sm first:pt-0 last:border-b-0 sm:flex-row sm:gap-8"
-        >
+          className="flex flex-col gap-1 border-b border-[#2c2b2b] py-3 text-sm first:pt-0 last:border-b-0 sm:flex-row sm:gap-8">
           <span className="text-text sm:shrink-0">
             {experience.years_of_experience}
           </span>
@@ -58,7 +57,6 @@ function Experiences() {
     </ul>
   );
 }
-
 
 function ExperienceSection() {
   return (

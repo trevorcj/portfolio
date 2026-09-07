@@ -24,8 +24,8 @@ function Blogs() {
           key={blog.id}
           href={blog.url}
           target="_blank"
-          className="flex flex-col gap-2 border-b border-[#2c2b2b] py-3 text-sm first:pt-0 last:border-b-0 no-link-style transition-all duration-500 ease-in-out hover:pl-2 sm:flex-row sm:justify-between sm:gap-4"
-        >
+          data-no-scramble
+          className="flex flex-col gap-2 border-b border-[#2c2b2b] py-3 text-sm first:pt-0 last:border-b-0 no-link-style transition-all duration-500 ease-in-out hover:pl-2 sm:flex-row sm:justify-between sm:gap-4">
           <span className="text-white">{blog.title}</span>
 
           <time className="text-text sm:shrink-0">{blog.year}</time>
