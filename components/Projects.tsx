@@ -17,6 +17,14 @@ const projectDetails = [
     url: "https://bin-around-the-bloc.vercel.app/admin/signup",
   },
   {
+    title: "Compass Waitlist",
+    description:
+      "A polished, responsive waitlist experience for a career platform connecting Nigerian students, recruiters, and mentors. Built with a focus on clear product communication, UI quality, and SEO.",
+    thumbnail: "./compass.png",
+    url: "https://www.mycompasscareer.com/",
+    // url: "https://compass-landing-page-production.up.railway.app/",
+  },
+  {
     title: "Klean",
     description:
       "A command-line tool designed to scaffold a clean Vite + React application with optional Tailwind CSS and structured project architecture. Built with NodeJS.",
