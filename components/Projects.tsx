@@ -17,10 +17,10 @@ const projectDetails = [
     url: "https://bin-around-the-bloc.vercel.app/admin/signup",
   },
   {
-    title: "Compass Waitlist",
+    title: "Compass",
     description:
       "A polished, responsive waitlist experience for a career platform connecting Nigerian students, recruiters, and mentors. Built with a focus on clear product communication, UI quality, and SEO.",
-    thumbnail: "./compass.png",
+    thumbnail: "/compass.png",
     url: "https://www.mycompasscareer.com/",
     // url: "https://compass-landing-page-production.up.railway.app/",
   },
