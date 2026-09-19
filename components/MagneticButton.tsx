@@ -129,23 +129,12 @@ export default function MagneticButton({
       <a
         ref={buttonRef}
         href={href}
-        className={`group relative flex h-9 items-center justify-center overflow-hidden rounded-full px-4 text-sm will-change-transform ${className}`}
-        style={{
-          backgroundImage: "linear-gradient(to top, #ffffff26, #ffffff08)",
-          backdropFilter: "blur(4px)",
-          WebkitBackdropFilter: "blur(4px)",
-          boxShadow: "0 0 0 0.5px #ffffff30",
-        }}>
-        <span
-          className="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100"
-          style={{
-            backgroundImage: "linear-gradient(to top, transparent, #ffffff10)",
-          }}
-        />
+        className={`no-link-style group relative flex h-9 items-center justify-center overflow-hidden rounded-full bg-[#0e0e0e] px-4 text-sm will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground dark:bg-white/[0.05] dark:hover:bg-white/[0.1] dark:border dark:border-[0.2] dark:border-white/5 backdrop-blur-sm ${className}`}>
+        <span className="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100 bg-gradient-to-t from-transparent to-black/5 dark:to-white/10" />
 
         <span
           ref={labelRef}
-          className="relative z-10 will-change-transform text-[#c6c6c6]">
+          className="relative z-10 will-change-transform text-white dark:text-[#c6c6c6] font-medium">
           {children}
         </span>
       </a>

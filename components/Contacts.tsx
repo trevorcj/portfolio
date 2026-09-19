@@ -13,7 +13,7 @@ const contacts = [
   },
   {
     id: 2,
-    platform: "Intsagram",
+    platform: "Instagram",
     url: "https://instagram.com/trevorcjustus",
   },
   {
@@ -40,26 +40,26 @@ const contacts = [
 
 function Contact() {
   return (
-    <>
-      <ul className="flex flex-col items-start gap-3">
-        {contacts.map((contact) => (
+    <ul className="flex flex-col items-start gap-3">
+      {contacts.map((contact) => (
+        <li key={contact.id}>
           <Link
-            key={contact.id}
             href={contact.url}
             target="_blank"
-            className="text-sm m:gap-4">
-            <span className="text-white">{contact.platform}</span>
+            rel="noreferrer"
+            className="text-sm">
+            <span className="text-foreground">{contact.platform}</span>
           </Link>
-        ))}
-      </ul>
-    </>
+        </li>
+      ))}
+    </ul>
   );
 }
 
 function ContactSection() {
   return (
-    <section className="mt-16">
-      <h2 className="text-sm text-text">contact</h2>
+    <section className="mt-16" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" className="text-sm text-text">contact</h2>
 
       <div className="mt-4">
         <Contact />

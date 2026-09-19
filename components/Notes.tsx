@@ -23,18 +23,24 @@ const notes = [
 
 function Notes() {
   return (
-    <ul>
+    <ul className="flex flex-col">
       {notes.map((note) => (
-        <Link
+        <li
           key={note.id}
-          href={note.url}
-          target="_blank"
-          data-no-scramble
-          className="flex flex-col gap-2 border-b border-[#2c2b2b] py-3 text-sm first:pt-0 last:border-b-0 no-link-style transition-all duration-500 ease-in-out hover:pl-2 sm:flex-row sm:justify-between sm:gap-4">
-          <span className="text-white">{note.title}</span>
+          className="group border-b border-border py-3 first:pt-0 last:border-b-0">
+          <Link
+            href={note.url}
+            target="_blank"
+            rel="noreferrer"
+            data-no-scramble
+            className="flex flex-col gap-2 text-sm no-link-style sm:flex-row sm:justify-between sm:gap-4">
+            <span className="inline-block text-foreground transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-2 will-change-transform">
+              {note.title}
+            </span>
 
-          <time className="text-text sm:shrink-0">{note.year}</time>
-        </Link>
+            <time className="text-text sm:shrink-0">{note.year}</time>
+          </Link>
+        </li>
       ))}
     </ul>
   );
@@ -42,8 +48,8 @@ function Notes() {
 
 function NotesSection() {
   return (
-    <section className="mt-16">
-      <h2 className="text-sm text-text">notes</h2>
+    <section className="mt-16" aria-labelledby="notes-heading">
+      <h2 id="notes-heading" className="text-sm text-text">notes</h2>
 
       <div className="mt-4">
         <Notes />

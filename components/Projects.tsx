@@ -51,8 +51,8 @@ function ProjectTile() {
   return (
     <>
       {projectDetails.map((project) => (
-        <div key={project.title} className="mb-20">
-          <div className="bg-[#ededed] p-6 w-full">
+        <article key={project.title} className="mb-20">
+          <div className="bg-[#ededed] dark:bg-[#1a1a1a] p-6 w-full">
             <Image
               src={project.thumbnail}
               alt={`${project.title}, ${project.description}`}
@@ -63,13 +63,19 @@ function ProjectTile() {
           </div>
 
           <div className="mt-6 flex flex-col gap-3 p-4 items-start">
-            <h3 className="text-white text-sm font-medium ">{project.title}</h3>
-            <p className="text-text text-sm ">{project.description}</p>
-            <Link href={project.url} target="_blank" className="text-sm">
+            <h3 className="text-foreground text-sm font-medium">
+              {project.title}
+            </h3>
+            <p className="text-text text-sm">{project.description}</p>
+            <Link
+              href={project.url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm">
               View {project.title}
             </Link>{" "}
           </div>
-        </div>
+        </article>
       ))}
     </>
   );
@@ -77,8 +83,10 @@ function ProjectTile() {
 
 function ProjectSection() {
   return (
-    <section className="mt-16">
-      <h2 className="text-sm text-text">selected work</h2>
+    <section className="mt-16" aria-labelledby="selected-work-heading">
+      <h2 id="selected-work-heading" className="text-sm text-text">
+        selected work
+      </h2>
 
       <div className="mt-4">
         <ProjectTile />

@@ -39,17 +39,17 @@ const experiences = [
 
 function Experiences() {
   return (
-    <ul>
+    <ul className="flex flex-col">
       {experiences.map((experience) => (
         <li
           key={experience.id}
-          className="flex flex-col gap-1 border-b border-[#2c2b2b] py-3 text-sm first:pt-0 last:border-b-0 sm:flex-row sm:gap-8">
+          className="flex flex-col gap-1 border-b border-border py-3 text-sm first:pt-0 last:border-b-0 sm:flex-row sm:gap-8">
           <span className="text-text sm:shrink-0">
             {experience.years_of_experience}
           </span>
 
           <span className="flex flex-col gap-1 sm:flex-row sm:gap-4">
-            <span>{experience.title}</span>
+            <span className="text-foreground">{experience.title}</span>
             <span className="text-text">{experience.company}</span>
           </span>
         </li>
@@ -60,8 +60,8 @@ function Experiences() {
 
 function ExperienceSection() {
   return (
-    <section className="mt-16">
-      <h2 className="text-sm text-text">experiences</h2>
+    <section className="mt-16" aria-labelledby="experience-heading">
+      <h2 id="experience-heading" className="text-sm text-text">experiences</h2>
 
       <div className="mt-4">
         <Experiences />

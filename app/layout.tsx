@@ -43,9 +43,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function() {
+              try {
+                var t = localStorage.getItem('theme');
+                if (t === 'light') {
+                  document.documentElement.classList.remove('dark');
+                } else {
+                  document.documentElement.classList.add('dark');
+                }
+              } catch(e) {}
+            })();`,
+          }}
+        />
+      </head>
       <body className="mx-auto pt-16 px-8 max-w-162.5">
-        <nav className="flex justify-between text-sm mb-15">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-foreground focus:text-background focus:rounded-md focus:shadow-lg focus:outline-none">
+          Skip to main content
+        </a>
+
+        <nav className="flex justify-between text-sm mb-15" aria-label="Main Navigation">
           <Avatar />
         </nav>
 

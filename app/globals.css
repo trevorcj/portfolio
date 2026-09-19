@@ -1,25 +1,41 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
-  --foreground: #0e0e0e;
-  --text-color: #b0b0b0;
+  --foreground: #111111;
+  --text-color: #525252;
+  --border: #e5e5e5;
+  --border-muted: #f0f0f0;
+  --link-underline: #b0b0b0;
+  color-scheme: light;
+}
+
+.dark {
+  --background: #0e0e0e;
+  --foreground: #ffffff;
+  --text-color: #a1a1a1;
+  --border: #2c2b2b;
+  --border-muted: #1e1e1e;
+  --link-underline: #626262b3;
+  color-scheme: dark;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-text: var(--text-color);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0e0e0e;
-    --foreground: #ffffff;
-  }
+  --color-border: var(--border);
+  --color-border-muted: var(--border-muted);
 }
 
 ::selection {
+  background: #e5e5e5;
+  color: #111111;
+}
+
+.dark ::selection {
   background: #626262;
   color: #ffffff;
 }
@@ -31,11 +47,13 @@ body {
     -apple-system, "system-ui", "SF Pro Text", "SF Pro Display",
     "Helvetica Neue", Arial, sans-serif;
   line-height: 22px;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 
 a {
-  color: #fff;
+  color: var(--foreground);
   position: relative;
+  transition: color 0.2s ease-in-out;
 }
 
 [data-scramble] {
@@ -47,14 +65,14 @@ a::after {
   position: absolute;
   width: 100%;
   height: 0.5px;
-  background-color: #626262b3;
+  background-color: var(--link-underline);
   bottom: -2px;
   left: 0;
   transition: all 0.3s ease-in-out;
 }
 
 a:hover::after {
-  background-color: #fff;
+  background-color: var(--foreground);
 }
 
 .no-link-style {
@@ -63,4 +81,13 @@ a:hover::after {
 
 .no-link-style::after {
   display: none;
+}
+
+@media (forced-colors: active) {
+  a::after {
+    background-color: LinkText;
+  }
+  a:hover::after {
+    background-color: Highlight;
+  }
 }

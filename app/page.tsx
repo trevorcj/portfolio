@@ -54,10 +54,10 @@ function Home() {
         }}
       />
 
-      <main>
-        <section className="intro-section">
+      <main id="main-content">
+        <section className="intro-section" aria-label="Introduction">
           <div className="text-sm text-text flex flex-col gap-3">
-            <h1 className="">I’m Chimamanda, a Frontend developer.</h1>
+            <h1 className="text-foreground font-medium">I’m Chimamanda, a Frontend developer.</h1>
 
             <p>
               I turn designs, ideas, and product requirements into fast,
@@ -74,7 +74,7 @@ function Home() {
             <p>
               Based in Lagos, Nigeria. Currently open to full-time frontend
               roles and interesting collaborations.{" "}
-              <Link href="https://cal.com/trevorcjustus" target="_blank">
+              <Link href="https://cal.com/trevorcjustus" target="_blank" rel="noreferrer">
                 Book a call
               </Link>
             </p>

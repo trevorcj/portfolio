@@ -1,11 +1,14 @@
-import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
 
 function Footer({ children }: { children: React.ReactNode }) {
   return (
-    <footer className="mt-20 mb-10 flex justify-between text-sm">
-      <p className="text-sm text-text">Currently in Lagos, Nigeria • UTC+1</p>
+    <footer className="mt-20 mb-10 flex items-center justify-between text-sm">
+      <div className="flex items-center gap-3">
+        <ThemeToggle />
+        <p className="text-sm text-text">Currently in Lagos, Nigeria • UTC+1</p>
+      </div>
 
-      {children}
+      <div>{children}</div>
     </footer>
   );
 }
