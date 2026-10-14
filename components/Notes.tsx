@@ -3,18 +3,24 @@ import Link from "next/link";
 const notes = [
   {
     id: 0,
+    year: "October 2026",
+    title: "Incentives and Insecurities",
+    url: "https://medium.com/readers-club/incentives-and-insecurities-d412cbbdd35b",
+  },
+  {
+    id: 1,
     year: "July 2026",
     title: "You don’t always need a new idea",
     url: "https://medium.com/@heyitstrev/you-dont-always-need-a-new-idea-9aa35d7ce8b4",
   },
   {
-    id: 1,
+    id: 2,
     year: "July 2026",
     title: "Who told you that?",
     url: "https://medium.com/readers-club/who-told-you-that-16d293f4c1b4",
   },
   {
-    id: 2,
+    id: 3,
     year: "June 2026",
     title: "The trap of falling in love with solutions",
     url: "https://medium.com/@heyitstrev/the-trap-of-falling-in-love-with-solutions-d6c38dd65978",
